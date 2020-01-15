@@ -4,16 +4,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using ApiProject.Data;
 using HotelManagemant.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiProject.Controllers
 {
+
     [Produces("application/json")]
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
+
     public class HotelController : ControllerBase
     {
         private ApiExampleDbContext api;

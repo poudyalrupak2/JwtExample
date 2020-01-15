@@ -1,4 +1,5 @@
-﻿using HotelManagemant.Models;
+﻿using ApiProject.Models;
+using HotelManagemant.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace ApiProject.Data
             {
 
             }
-
+        public DbSet<User> user { get; set; }
         public DbSet<RegisterQuantityType> QunatityType { get; set; }
         public DbSet<StockIng> stockIngs { get; set; }
         public DbSet<Login> Login { get; set; }
